@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup.in</title>
+</head>
+<body>
+    <center>
+    <h1 >Login Page</h1>
+    <input type="email" placeholder="Enter email" class="input1">
+    <br>
+    <input type="number" placeholder="Enter password" class="input2">
+    <br>
+    <button class="button" onclick="log()">Login</button>
+    <br>
+    <div class="bgc">
+        
+    </div>
+    <style>
+    .bgc
+    {
+        background-color: black;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+        z-index: 1;
+    }
+    </style>
+    <div class="popup">
+    <p style="color: white;">Password incorrect !</p>
+    <button class="hide" onclick="retry()">Retry</button>
+    </div>
+    <style>
+    .popup
+    {
+        background-color: black;
+        border-radius: 10px;
+        width: 300px;
+        height: 100px;
+        display: none;
+        z-index: 100;
+        left: 30%;
+        top: 30%;
+        position: absolute;
+        padding: 15px;
+    }
+    </style>
+    
+</center>
+
+<script>
+    var a=document.querySelector(".popup")
+    var b=document.querySelector(".bgc")
+
+    function log()
+    {
+        a.style.display="block"
+        b.style.display="block"
+    }
+    function retry()
+    {
+        a.style.display="none"
+        b.style.display="none"
+    }
+    
+var k=document.querySelector(".hide")
+k.addEventListener("click",function(){
+    alert("Enter correct details")
+    })
+
+</script>
+<style>
+input
+{
+    margin: 10px;
+    width: 200px;
+    height: 25px;
+}
+</style>
+<style>
+button
+{
+    margin: 10px;
+    width: 100px;
+    height: 25px;
+
+}
+</style>
+
+</body>
+</html>
